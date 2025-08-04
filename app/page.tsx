@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Calculator, DollarSign, Clock, Scale, Shuffle } from 'lucide-react';
 import { useUrlParams } from '@/hooks/useUrlParams';
-import { useEffect } from 'react';
 import CurrencyConverter from '@/components/CurrencyConverter';
 import UnitConverter from '@/components/UnitConverter';
 import TimeZoneConverter from '@/components/TimeZoneConverter';
@@ -84,7 +83,9 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <ActiveComponent />
+        <Suspense fallback={<p>Loading...</p>}>
+          <ActiveComponent />
+        </Suspense>
       </main>
 
       {/* Footer */}
