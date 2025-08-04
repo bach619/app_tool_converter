@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ihavetools.com/sitemap.xml
+
+# Google AdSense
+google.com, pub-6435811821902528, DIRECT, f08c47fec0942fa0
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /*.css$
+Allow: /*.js$
